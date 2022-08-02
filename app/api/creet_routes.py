@@ -1,6 +1,5 @@
 from datetime import datetime
 from distutils.command.upload import upload
-from turtle import up
 from flask import Blueprint, request
 from flask_login import login_required, current_user
 from app.models import Creet, db
@@ -37,7 +36,7 @@ def create_creet():
     if form.validate_on_submit():
         if "image_url" in request.files:
             image_url = request.files["image_url"]
-            image_url.filename = get_unique_filename(image_url.filename)
+            image_url.filename = upload_file_to_s3(image_url.filename)
 
             upload = upload_file_to_s3(image_url)
 
@@ -76,7 +75,7 @@ def update_creet(creet_id):
         if "image_url" in request.files:
             image_url = request.files["image_url"]
 
-            image_url.filename = get_unique_filename(image_url.filename)
+            image_url.filename = upload_file_to_s3(image_url.filename)
 
             upload = upload_file_to_s3(image_url)
 

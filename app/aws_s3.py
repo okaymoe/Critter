@@ -1,9 +1,7 @@
 import boto3
 import botocore
-import os
 from .config import Config
 
-ALLOWED_EXTENSIONS = {"pdf", "png", "jpg", "jpeg", "gif"}
 
 s3 = boto3.client(
    "s3",
