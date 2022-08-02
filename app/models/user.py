@@ -44,7 +44,6 @@ class User(db.Model, UserMixin):
             'profile_img': self.profile_img,
             'header_img': self.header_img,
             'email': self.email,
-            'hashed_password': self.hashed_password,
             'birthday': self.birthday,
             'location': self.location,
             "joined": self.joined,
