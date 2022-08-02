@@ -41,8 +41,8 @@ def sign_up():
             header_img=data['header_img'],
             email=data['email'],
             password=data['password'],
-            location=data['location'],
             birthday=datetime.now(),
+            location=data['location'],
             joined=datetime.now()
         )
 
