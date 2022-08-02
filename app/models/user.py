@@ -12,6 +12,7 @@ class User(db.Model, UserMixin):
     name = db.Column(db.String(50), nullable=False)
     bio = db.Column(db.String(255))
     profile_img = db.Column(db.String(255))
+    header_img = db.Column(db.String(255))
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
     birthday = db.Column(db.String(35), nullable=True)
@@ -41,6 +42,7 @@ class User(db.Model, UserMixin):
             'name': self.name,
             'bio': self.bio,
             'profile_img': self.profile_img,
+            'header_img': self.header_img,
             'email': self.email,
             'hashed_password': self.hashed_password,
             'birthday': self.birthday,
