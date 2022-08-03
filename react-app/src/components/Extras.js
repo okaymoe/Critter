@@ -1,13 +1,12 @@
 import React from 'react'
 import "./Extras.css"
 
-const SidebarComponent = ({text}) => {
+const Extras = () => {
     return (
-        <div className="sidebar-choice">
-            {text}
-            <h2>h</h2>
+        <div className="extras">
+            <h1>extras</h1>
         </div>
     );
 }
 
-export default SidebarComponent
+export default Extras

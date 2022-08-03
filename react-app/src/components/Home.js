@@ -6,7 +6,7 @@ import Extras from './Extras'
 
 const Home = () => {
     return (
-      <div>
+      <div className="home">
         <Sidebar/>
         <Feed/>
         <Extras/>

@@ -1,5 +1,4 @@
 from datetime import datetime
-from distutils.command.upload import upload
 from flask import Blueprint, request
 from flask_login import login_required, current_user
 from app.models import Creet, db
@@ -17,7 +16,7 @@ def all_creets():
 
 # Get one creet
 @creet_routes.route('/<int:creet_id>')
-@login_required
+# @login_required
 def one_creet(creet_id):
     creet = Creet.query.get(creet_id)
     if creet:
@@ -105,4 +104,4 @@ def delete_creet(creet_id):
     creet = Creet.query.get(creet_id)
     db.session.delete(creet)
     db.session.commit()
-    return "creet has been deleted"
+    return "This creet has been deleted."
