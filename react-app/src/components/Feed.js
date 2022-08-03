@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Creets from "./Creets";
 import "./Feed.css";
 
 function Feed() {
@@ -8,7 +9,7 @@ function Feed() {
       <div className="feed_header">
         <h2>Home</h2>
       </div>
-
+      <Creets/>
       
 
     </div>
