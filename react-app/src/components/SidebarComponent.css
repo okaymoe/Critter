@@ -13,3 +13,14 @@
     font-size: 20px;
     margin-right: 20px;
 }
+
+.sidebar-choice:hover {
+    background-color: #e8f6fe;
+    border-radius: 30px;
+    color: var(--app-color);
+    transition: color 100ms ease-out;
+}
+
+.sidebar-choice--active {
+    color: var(--app-color);
+}
