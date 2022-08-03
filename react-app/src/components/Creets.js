@@ -1,20 +1,41 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import {getCreets} from '../store/creets'
+import { authenticate } from '../store/session';
 
 
-
-const Queets = () => {
-
-    const users = useSelector(state => state.user);
-    const sessionUser = useSelector(state => state.session?.user);
+const Creets = () => {
+    const dispatch = useDispatch();
+    // const users = useSelector(state => state.user);
     const creets = useSelector(state => state.creet);
+    const creetsArr = Object.values(creets)
+    const sessionUser = useSelector(state => state.session?.user);
+    console.log(creets, "fkdslfjlsdkfjs")
+
+
+
+
+    useEffect(() => {
+        (async () => {
+          await dispatch(authenticate());
+          await dispatch(getCreets());
+        })();
+      }, [dispatch]);
 
     return (
-        <div className="creets-wrap">
-            <h2>This is a creet</h2>
-        </div >
+        <>
+        <div>
+            {creetsArr.map((creet) => {
+                return (
+                    <div key={creet.id}>
+                        {creet.content}
+                    </div>
+                )
+            })}
+            </div>
+        </>
     )
 }
 
-export default Queets
+export default Creets
