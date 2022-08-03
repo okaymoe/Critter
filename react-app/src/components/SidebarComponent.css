@@ -1,0 +1,15 @@
+.sidebar-choice {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar-choice > .MuiSvgIcon-root {
+    padding: 20px;
+}
+
+.sidebar-choice > h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+}
