@@ -12,7 +12,6 @@ import './CreateCreet.css'
 const CreateCreet = () => {
 
     const user = useSelector(state => state.session.user);
-    console.log(user, "@@@@@@@")
     const dispatch = useDispatch();
     const [image, setImage] = useState(null);
     const [content, setContent] = useState('');

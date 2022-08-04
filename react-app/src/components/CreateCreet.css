@@ -72,7 +72,7 @@
     border-radius: 20px;
 }
 
-.add-creet-img-upload-container:hover {
+.addCreet-upload-container:hover {
     background-color: var(--app-background);
     transition: all;
     transition-duration: 200ms;
@@ -95,7 +95,7 @@
     display: none;
 }
 
-.add-creet-img-standby {
+.addCreet-imageStandby {
     display: flex;
     align-items: center;
 }
@@ -160,7 +160,7 @@
     cursor: pointer;
 }
 
-.add-creet-btn:disabled {
+.addCreet-submit:disabled {
     opacity: 40%;
     cursor: default;
 }
