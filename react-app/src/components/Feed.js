@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import CreateCreet from "./CreateCreet";
+// import CreetBox from "./CreetBox";
 import Creets from "./Creets";
 import "./Feed.css";
 
@@ -9,6 +11,7 @@ function Feed() {
       <div className="feed_header">
         <h2>Home</h2>
       </div>
+      <CreateCreet/>
       <Creets/>
       
 

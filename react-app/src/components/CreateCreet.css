@@ -1,0 +1,166 @@
+.addCreetForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.addCreet-sections {
+    padding: 20px;
+    display: inline;
+    border-bottom: 8px solid var(--app-background);
+}
+
+.creet-profile-img-add {
+    display: inline;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 22px;
+    margin-left: 15px;
+}
+
+.addCreet-section1 {
+    flex: 1;
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+.addCreet-input {
+    width: 450px;
+    height: 90px;
+    flex: 1;
+    margin-left: 20px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: transparent;
+    font-family: 'Lucida Sans Unicode';
+}
+
+.addCreet-section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 30px;
+    margin-top: -10px;
+}
+
+.creetBox__imageInput {
+    display: none;
+}
+
+.addCreet-imageStandby {
+    display: flex;
+    align-items: center;
+}
+
+.addCreet-input::-webkit-scrollbar {
+    display: none;
+}
+
+.addCreet-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 8px;
+    border-radius: 20px;
+}
+
+.add-creet-img-upload-container:hover {
+    background-color: var(--app-background);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.addCreet-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addCreet-icon {
+    color: var(--app-color);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.creetBox__imageInput {
+    display: none;
+}
+
+.add-creet-img-standby {
+    display: flex;
+    align-items: center;
+}
+
+.addCreet-img-delete {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+}
+
+.addCreet-img-delete:hover {
+    color: rgb(255, 0, 0);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.addCreet-img-title {
+    font-family: 'Lucida Sans Unicode';
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.addCreet-charcount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addCreet-count {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-right: 15px;
+}
+
+.addCreet-too-much {
+    font-family: 'Lucida Sans Unicode';
+    color: red;
+}
+
+
+.addCreet-280 {
+    font-family: 'Lucida Sans Unicode';
+}
+
+.addCreet-280-maximum {
+    font-family: 'Lucida Sans Unicode';
+}
+
+.addCreet-submit {
+    background-color: var(--app-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    width: 80px;
+    height: 40px !important;
+    margin-top: 10px !important;
+    margin-left: auto !important;
+    cursor: pointer;
+}
+
+.add-creet-btn:disabled {
+    opacity: 40%;
+    cursor: default;
+}

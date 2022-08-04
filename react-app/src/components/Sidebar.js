@@ -34,11 +34,11 @@ const Sidebar = () => {
         sessionUser && 
         <div className="sidebar">
             <BugReportIcon className="critter-logo"/>
-            <NavLink to='/'> 
+            <NavLink style={{textDecoration: 'none'}}id="profilenav" to='/'> 
             <SidebarComponent className="homeicon" text="Home" Icon={<HomeIcon/>}/>
             </NavLink>
             
-            <NavLink to={`/users/${sessionUser.id}`}> 
+            <NavLink style={{textDecoration: 'none'}} id="profilenav" to={`/users/${sessionUser.id}`}> 
             <SidebarComponent text="Profile" Icon={<AccountCircleIcon/>}/>
             </NavLink>
         

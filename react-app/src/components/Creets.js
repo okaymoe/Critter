@@ -7,13 +7,12 @@ import { authenticate } from '../store/session';
 
 const Creets = () => {
     const dispatch = useDispatch();
-    // const users = useSelector(state => state.user);
+    const users = useSelector(state => state.user);
+    console.log(users, "Zzzzzzzzzzzz")
     const creets = useSelector(state => state.creet);
     const creetsArr = Object.values(creets)
     const sessionUser = useSelector(state => state.session?.user);
     console.log(creets, "fkdslfjlsdkfjs")
-
-
 
 
     useEffect(() => {
@@ -29,6 +28,7 @@ const Creets = () => {
             {creetsArr.map((creet) => {
                 return (
                     <div key={creet.id}>
+                        {creet.user_id}
                         {creet.content}
                     </div>
                 )
