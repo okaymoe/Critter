@@ -4,7 +4,7 @@
 }
 
 .creets:hover {
-    background-color: #2c3d4d;
+    background-color: #fafafa;
     transition: all;
     transition-duration: 200ms;
 }
@@ -85,7 +85,7 @@
     height: 30px;
 }
 
-.stupid-dot {
+.dot {
     margin-left: 12px;
 }
 

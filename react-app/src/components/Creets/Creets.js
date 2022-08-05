@@ -29,7 +29,7 @@ const Creets = ({userId, creetId}) => {
                                     <NavLink className="creet-link" to={`/creets/${creet.id}`}>
                                         <div className="feed-creet-names">
                                             <div className="feed-creet-display-name">{users[creet.user_id]?.name}</div>
-                                            <div className="feed-creet-username">@{users[creet.user_id]?.username}<p className="stupid-dot">·</p></div>
+                                            <div className="feed-creet-username">@{users[creet.user_id]?.username}<p className="dot">·</p></div>
                                             <div className="timestamp-container">
                                                 <TimeAgo
                                                     className="timestamp"
