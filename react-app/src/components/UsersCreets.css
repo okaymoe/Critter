@@ -9,7 +9,7 @@
     transition-duration: 200ms;
 }
 
-.profile_creets-pic {
+.profile-creets-profile-pic {
     height: 44px;
     width: 44px;
     border-radius: 22px;
@@ -24,7 +24,7 @@
     border-bottom: 1px solid rgb(84, 84, 84);
 }
 
-.profile_creet_link_edit_to_text_decoration_none {
+.profile-creet-link {
     text-decoration: none;
     cursor: pointer;
 }
@@ -39,13 +39,13 @@
     margin-left: 12px;
 }
 
-.profile_creet-titles {
+.profile-feed-creet-names {
     display: flex;
     align-items: center;
     height: 30px;
 }
 
-.profile_creet-username-edit-profile {
+.profile-feed-creet-username-and-edit-btn {
     width: 430px;
     display: flex;
     justify-content: space-between;
@@ -56,6 +56,7 @@
 .profile-feed-creet-username {
     text-decoration: none;
     cursor: pointer;
+    color: white;
     font-weight: bold;
     font-size: 14px;
     font-family: 'Lucida Sans Unicode';
@@ -69,9 +70,10 @@
     align-items: center;
 }
 
-#profile-feed-creet {
+.profile-feed-creet {
     text-decoration: none;
     cursor: pointer;
+    color: black;
     font-size: 14px;
     padding-left: 10px;
     font-family: 'Lucida Sans Unicode';

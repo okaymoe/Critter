@@ -9,25 +9,25 @@ def seed_creets():
     )
     creet2 = Creet(
         user_id=2,
-        content="Goodbye, World!",
+        content="Just a new user here :)!",
         created_at="2022-08-01 11:11:12",
         updated_at="2022-08-01 11:11:12"
     )
     creet3 = Creet(
         user_id=3,
-        content="This is going to be fun!",
+        content="Wow so cool! Reminds me of another website!",
         created_at="2022-08-01 11:11:12",
         updated_at="2022-08-01 11:11:12"
     )
     creet4 = Creet(
         user_id=2,
-        content="Nevermind, I want to go home.",
+        content="how 2 social media",
         created_at="2022-08-01 11:11:12",
         updated_at="2022-08-01 11:11:12"
     )
     creet5 = Creet(
         user_id=1,
-        content="Where do you go, my lovely?",
+        content="I love bones",
         created_at="2022-08-01 11:11:12",
         updated_at="2022-08-01 11:11:12"
     )

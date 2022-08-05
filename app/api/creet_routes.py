@@ -29,10 +29,9 @@ def one_creet(creet_id):
 @login_required
 def create_creet():
     form = CreetForm()
-    data = form.data
     form['csrf_token'].data = request.cookies['csrf_token']
-
     if form.validate_on_submit():
+        
         if "image_url" in request.files:
             image_url = request.files["image_url"]
             image_url.filename = upload_file_to_s3(image_url.filename)
@@ -49,7 +48,7 @@ def create_creet():
 
         create_creet = Creet(
             user_id=current_user.to_dict()['id'],
-            content=data['content'],
+            content=form.content.data,
             image_url=image_url,
             created_at=datetime.now(),
             updated_at=datetime.now()

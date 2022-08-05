@@ -2,7 +2,7 @@ import "./EditCreets.css";
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { eraseCreet, editingCreet } from "../../store/creets";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import ClearIcon from '@mui/icons-material/Clear';
 import ImageIcon from '@mui/icons-material/Image';
@@ -50,9 +50,9 @@ const EditCreets = ({ setShowModal, creet_id }) => {
             
             <div className="edit-creet-btn-and-title">
                 <div className="edit-creet-top-left">
-                    <div onClick={() => setShowModal(false)} className='edit-creet-close-btn-container'>
+                    {/* <div onClick={() => setShowModal(false)} className='edit-creet-close-btn-container'>
                         <ClearIcon className='edit-creet-close-btn' />
-                    </div>
+                    </div> */}
                     <h3 className="edit-creet-title">Edit Creet</h3>
                 </div>
                 <div className="edit-creet-top-right">
