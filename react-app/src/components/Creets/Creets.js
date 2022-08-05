@@ -2,9 +2,9 @@ import "./Creets.css";
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-// import EditCreetModal from "./EditCreetModal";
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import TimeAgo from 'react-timeago'
+import EditCreets from "../Creets/EditCreets";
 
 
 const Creets = () => {
@@ -22,7 +22,7 @@ const Creets = () => {
                 return (
                     <div key={creet.id} className="creets">
                         <NavLink className="all-creets-profile-pic-link" to={`/users/${creet.userId}`}>
-                            <img className='all-creets-profile-pic' src={creet.joined.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : creet.joined.profile_img} alt='' />
+                            <img className='all-creets-profile-pic' src={users[creet.user_id]?.profile__img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : users[creet.user_id]?.profile_img} alt='' />
                         </NavLink>
                         <div className="all-creets-everything-minus-pic">
                             <div className="feed-creet-names-edit-and-content">
@@ -41,8 +41,8 @@ const Creets = () => {
                                             </div>
                                         </div>
                                     </NavLink>
-                                    {/* {creet.userId === sessionUser.id &&
-                                        <EditCreetModal creetId={creet.id} className="all-creets-edit-btn" />
+                                    {/* {creet.user_id === sessionUser.id &&
+                                        <EditCreets creetId={creet.id} className="all-creets-edit-btn" />
                                     } */}
                                 </div>
                                 <div className="feed-creet-container">

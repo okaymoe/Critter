@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CreateCreet from "./CreateCreet";
+import CreateCreet from "./Creets/CreateCreet";
 // import CreetBox from "./CreetBox";
-import Creets from "./Creets";
+import Creets from "./Creets/Creets";
 import "./Feed.css";
 
 function Feed() {

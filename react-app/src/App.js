@@ -13,6 +13,7 @@ import Home from './components/Home';
 import Sidebar from './components/Sidebar';
 import ProfileCreets from './components/Profile';
 import { getUsers } from './store/users';
+import EditCreets from './components/Creets/EditCreets';
 
 
 
@@ -53,6 +54,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <ProfileCreets />
+        </ProtectedRoute>
+        <ProtectedRoute path='/creets/edit/:creetId' exact={true} >
+          <EditCreets />
         </ProtectedRoute>
         <ProtectedRoute path='/' exact={true} >
           <Home/>

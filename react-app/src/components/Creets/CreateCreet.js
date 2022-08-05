@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { addCreet } from "../store/creets";
+import { addCreet } from "../../store/creets";
 import ImageIcon from '@mui/icons-material/Image';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './CreateCreet.css'
