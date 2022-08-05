@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Extras from './Extras.js';
+import Feed from './Feed.js';
+import Sidebar from './Sidebar.js'
+import UsersCreets from './UsersCreets.js';
 
-function User() {
+function Profile() {
   const [user, setUser] = useState({});
-  const { userId }  = useParams();
+  const { userId } = useParams();
 
   useEffect(() => {
     if (!userId) {
@@ -21,17 +25,11 @@ function User() {
   }
 
   return (
-    <ul>
-      <li>
-        <strong>User Id</strong> {userId}
-      </li>
-      <li>
-        <strong>Username</strong> {user.username}
-      </li>
-      <li>
-        <strong>Email</strong> {user.email}
-      </li>
-    </ul>
+    <div className="home">
+      <Sidebar/>
+      <UsersCreets userId={userId}/>
+      <Extras/>
+    </div>
   );
 }
-export default User;
+export default Profile;

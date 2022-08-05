@@ -25,5 +25,6 @@ class Creet(db.Model):
             "image_url": self.image_url,
             "content": self.content,
             "created_at": self.created_at,
-            "updated_at": self.updated_at
+            "updated_at": self.updated_at,
+            "joined": self.users.to_dict()
         }

@@ -6,10 +6,13 @@ import SignUpForm from './components/auth/SignUpForm';
 import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
-import User from './components/User';
+import User from './components/Profile';
 import { authenticate } from './store/session';
+import { getCreets } from './store/creets';
 import Home from './components/Home';
 import Sidebar from './components/Sidebar';
+import ProfileCreets from './components/Profile';
+import { getUsers } from './store/users';
 
 
 
@@ -20,7 +23,14 @@ function App() {
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
+      await dispatch(getUsers());
       setLoaded(true);
+    })();
+  }, [dispatch]);
+
+  useEffect(() => {
+    (async () => {
+      await dispatch(getUsers());
     })();
   }, [dispatch]);
 
@@ -42,7 +52,7 @@ function App() {
           <UsersList/>
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
-          <User />
+          <ProfileCreets />
         </ProtectedRoute>
         <ProtectedRoute path='/' exact={true} >
           <Home/>

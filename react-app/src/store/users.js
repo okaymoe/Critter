@@ -1,7 +1,7 @@
 const GET_USERS = "/users/GET_USERS";
 const CREATE_USER = '/users/CREATE_USER';
 
-const allUsers = (users) => ({
+const loadUsers = (users) => ({
     type: GET_USERS,
     users,
 });
@@ -15,7 +15,7 @@ export const getUsers = () => async (dispatch) => {
     const response = await fetch("/api/users");
     if (response.ok) {
         const userList = await response.json();
-        dispatch(allUsers(userList));
+        dispatch(loadUsers(userList));
         return userList;
     }
 };

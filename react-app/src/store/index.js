@@ -7,9 +7,9 @@ import user from './users';
 
 const rootReducer = combineReducers({
   session,
+  user,
   creet,
   comment,
-  user
 });
 
 

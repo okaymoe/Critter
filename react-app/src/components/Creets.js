@@ -1,40 +1,78 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import React, {useEffect, useState} from 'react'
-import {getCreets} from '../store/creets'
-import { authenticate } from '../store/session';
+import "./Creets.css";
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+// import EditCreetModal from "./EditCreetModal";
+import AddCommentIcon from '@mui/icons-material/AddComment';
+import TimeAgo from 'react-timeago'
 
 
 const Creets = () => {
-    const dispatch = useDispatch();
+
     const users = useSelector(state => state.user);
-    console.log(users, "Zzzzzzzzzzzz")
-    const creets = useSelector(state => state.creet);
-    const creetsArr = Object.values(creets)
     const sessionUser = useSelector(state => state.session?.user);
-    console.log(creets, "fkdslfjlsdkfjs")
+    const creets = useSelector(state => state.creet);
+    const creetsArr = Object.values(creets);
+    const latestCreets = creetsArr.reverse();
 
-
-    useEffect(() => {
-        (async () => {
-          await dispatch(authenticate());
-          await dispatch(getCreets());
-        })();
-      }, [dispatch]);
 
     return (
-        <>
-        <div>
-            {creetsArr.map((creet) => {
+        <div className="creets-wrap">
+            {latestCreets?.map(creet => {
                 return (
-                    <div key={creet.id}>
-                        {creet.user_id}
-                        {creet.content}
+                    <div key={creet.id} className="creets">
+                        <NavLink className="all-creets-profile-pic-link" to={`/users/${creet.userId}`}>
+                            <img className='all-creets-profile-pic' src={creet.joined.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : creet.joined.profile_img} alt='' />
+                        </NavLink>
+                        <div className="all-creets-everything-minus-pic">
+                            <div className="feed-creet-names-edit-and-content">
+                                <div className="feed-creet-username-and-edit-btn">
+                                    <NavLink className="creet-link" to={`/creets/${creet.id}`}>
+                                        <div className="feed-creet-names">
+                                            <div className="feed-creet-display-name">{creet.joined.name}</div>
+                                            <div className="feed-creet-username">@{creet.joined.username}<p className="stupid-dot">·</p></div>
+                                            <div className="timestamp-container">
+                                                <TimeAgo
+                                                    className="timestamp"
+                                                    date={creet.created_at}
+                                                    locale='en-US'
+                                                    timestyle="twitter-first-minute"
+                                                />
+                                            </div>
+                                        </div>
+                                    </NavLink>
+                                    {/* {creet.userId === sessionUser.id &&
+                                        <EditCreetModal creetId={creet.id} className="all-creets-edit-btn" />
+                                    } */}
+                                </div>
+                                <div className="feed-creet-container">
+                                    <NavLink className="creet-link" to={`/creets/${creet.id}`}>
+                                        <div className="feed-creet">
+                                            {creet.content.split('\n').map(line => (<div key={line.id} id={creet.id} className="feed-creet-content-lines">{line}</div>))}
+                                        </div>
+                                        {/* {creet.image_url &&
+                                            <div className='feed-creet-img-container'>
+                                                <img className='feed-creet-img' src={creet.image_url} alt='' />
+                                            </div>
+                                        } */}
+                                    </NavLink>
+                                </div>
+                            </div>
+                            <NavLink className="creet-link" to={`/creets/${creet.id}`}>
+                                <div className="feed-creet-icons">
+                                    <div className='feed-creet-icon-and-stat'>
+                                        <AddCommentIcon />
+                                        <p className='feed-creet-stat'>
+                                            {/* <NumberOfComments creetId={creet.id} /> */}
+                                        </p>
+                                    </div>
+                                </div>
+                            </NavLink>
+                        </div>
                     </div>
                 )
             })}
-            </div>
-        </>
+        </div >
     )
 }
 
