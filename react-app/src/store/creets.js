@@ -30,8 +30,8 @@ export const getCreets = () => async (dispatch) => {
 export const addCreet = (creet) => async (dispatch) => {
 
 	const {
-		content,
 		user_id,
+		content,
 		image_url
 	} = creet;
 

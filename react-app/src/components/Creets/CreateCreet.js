@@ -7,8 +7,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import './CreateCreet.css'
 
 
-
-
 const CreateCreet = () => {
 
     const user = useSelector(state => state.session.user);
@@ -63,8 +61,12 @@ const CreateCreet = () => {
                             <div className={!image ? "addCreet-upload-container" : "addCreet-upload-container-off"}>
                                 {!image &&
                                     <label className="addCreet-label"><ImageIcon className="addCreet-icon" />
-                                        <input className="creetBox__imageInput" type="file" name="file"
-                                            accept="image/png, image/jpeg, image/jpg" onChange={updateImage} />
+                                        <input 
+                                            className="creetBox__imageInput" 
+                                            type="file" 
+                                            name="file"
+                                            accept="image/png, image/jpeg, image/jpg" 
+                                            onChange={updateImage} />
                                     </label>
 
                                 }

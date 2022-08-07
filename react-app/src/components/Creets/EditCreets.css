@@ -36,6 +36,10 @@
     font-size: 25px;
     margin-top: 0px;
     margin-bottom: 0px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .edit-creet-close-btn {
@@ -52,12 +56,13 @@
     width: 40px;
     cursor: pointer;
     border-radius: 25px;
-    color: white;
+    color: rgb(134, 134, 134);
 }
 
 .edit-creet-close-btn-container:hover {
     background-color: #dddddd;
     transition: all;
+    color: red;
     transition-duration: 200ms;
 }
 
@@ -69,7 +74,6 @@
     border: none;
     height: 90px;
     background-color: transparent;
-    color: white;
     resize: none;
     margin-left: 55px;
     width: 85%;
@@ -164,12 +168,6 @@
     transition-duration: 200ms;
 }
 
-.edit-creet-title {
-    font-family: 'Lucida Sans Unicode';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .edit-creet-img-upload {
     display: flex;
@@ -228,27 +226,28 @@
 .edit-creet-remove-img-txt {
     margin-top: 0px;
     margin-bottom: 0px;
+    color: black;
 }
 
 .edit-creet-img-delete-btn {
     cursor: pointer;
     height: 20px;
     width: 20px;
-    color: white;
+    color: black;
     margin-left: 15px;
 }
 
 .edit-creet-img-delete-btn:hover {
-    color: rgb(219, 219, 219);
+    color: rgb(255, 0, 0);
     transition: all;
     transition-duration: 200ms;
 }
 
 .edit-creet-img-name {
-    color: white;
     font-family: 'Lucida Sans Unicode';
     margin-top: 0px;
     margin-bottom: 0px;
+    color: black;
 }
 
 .edit-creet-img-container {

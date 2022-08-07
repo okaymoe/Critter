@@ -1,0 +1,170 @@
+.creet-comment-wrap {
+    border-right: 1px solid var(--app-background);
+    width: 500px;
+
+}
+
+.thread {
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 20px;
+}
+
+.thread-and-back-button {
+    display: flex;
+    align-items: center;
+}
+
+.single-creet-back-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-left: 5px;
+}
+
+.single-creet-back-button {
+    text-decoration: none;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 15px;
+    padding-left: 5px;
+}
+
+.single-creet-back-btn-container:hover {
+    background-color: var(--app-background);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.single-creet-pic-names-and-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.single-creet-pic-and-names {
+    display: flex;
+    align-items: center;
+}
+
+.single-creet-profile-pic {
+    height: 44px;
+    width: 44px;
+    border-radius: 22px;
+    margin-left: 15px;
+}
+
+.single-creet-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.single-creet-username {
+    color: gray;
+    font-family: 'Lucida Sans Unicode';
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.single-creet-display-name {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Lucida Sans Unicode';
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.single-creet {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    padding-left: 10px;
+    font-family: 'Lucida Sans Unicode';
+    margin-left: 15px;
+    margin-bottom: 20px;
+    width: 92%;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.single-creet-content-lines {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    color: black
+}
+
+.single-creet-timestamp {
+    border-bottom: 1px solid rgb(84, 84, 84);
+    margin-left: 25px;
+    margin-right: 25px;
+    color: gray;
+    padding-bottom: 5px;
+}
+
+.single-creet-stats {
+    border-bottom: 1px solid rgb(84, 84, 84);
+    color: gray;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.single-creet-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(84, 84, 84);
+    color: gray;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.single-creet-icon-and-stat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.single-username-and-edit-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single-creet-icon-info {
+    margin-left: 5px;
+}
+
+.single-creet-img-container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+
+.single-creet-img {
+    max-width: 95%;
+    max-height: 500px;
+    border-radius: 10px;
+}

@@ -25,7 +25,7 @@ const Sidebar = () => {
         (async () => {
           await dispatch(authenticate());
           await dispatch(getCreets());
-        //   await dispatch(getComments());
+          await dispatch(getComments());
           await dispatch(getUsers());
         })();
       }, [dispatch]);

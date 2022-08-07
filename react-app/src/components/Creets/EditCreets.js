@@ -50,9 +50,9 @@ const EditCreets = ({ setShowModal, creet_id }) => {
             
             <div className="edit-creet-btn-and-title">
                 <div className="edit-creet-top-left">
-                    {/* <div onClick={() => setShowModal(false)} className='edit-creet-close-btn-container'>
+                    <div onClick={() => setShowModal(false)} className='edit-creet-close-btn-container'>
                         <ClearIcon className='edit-creet-close-btn' />
-                    </div> */}
+                    </div>
                     <h3 className="edit-creet-title">Edit Creet</h3>
                 </div>
                 <div className="edit-creet-top-right">
@@ -97,7 +97,7 @@ const EditCreets = ({ setShowModal, creet_id }) => {
                     <div className="edit-creet-progress-and-submit-btn">
                         <button disabled={(!content && !image) || content.length > 280} type="submit" className="submit-edit-creet-btn">Submit</button>
                         <div className="edit-creet-progress">
-                            {/* <span className={(content.length > 280 || (content.length === 0 && !image)) ? "edit-creet-char-total-red" : "edit-creet-char-total"}>{content.length}</span> */}
+                            <span className={(content.length > 280 || (content.length === 0 && !image)) ? "edit-creet-char-total-red" : "edit-creet-char-total"}>{content.length}</span>
                             <p className="edit-creet-char-max">/280</p>
                         </div>
                     </div>

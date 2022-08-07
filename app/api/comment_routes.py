@@ -3,7 +3,7 @@ from flask import Blueprint, request
 from flask_login import login_required, current_user
 from app.models import Comment, db
 from app.forms.comment_form import CommentForm
-from app.aws_s3 import *
+from app.s3_helpers import *
 from .utils import validation_errors_to_error_messages
 
 comment_routes = Blueprint('comments', __name__)
@@ -28,7 +28,7 @@ def create_comment():
         if "image_url" in request.files:
             image_url = request.files["image_url"]
 
-            # image_url.filename = get_unique_filename(image_url.filename)
+            image_url.filename = get_unique_filename(image_url.filename)
 
             upload = upload_file_to_s3(image_url)
             if "url" not in upload:

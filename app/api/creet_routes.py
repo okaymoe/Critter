@@ -3,16 +3,19 @@ from flask import Blueprint, request
 from flask_login import login_required, current_user
 from app.models import Creet, db
 from app.forms.creet_form import CreetForm
-from app.aws_s3 import *
+from app.s3_helpers import (
+upload_file_to_s3, allowed_file, get_unique_filename)
 from .utils import validation_errors_to_error_messages
 
 creet_routes = Blueprint('creets', __name__)
+
 
 # Grab all creets - no specific query
 @creet_routes.route('/')
 def all_creets():
     creets = Creet.query.all()
     return {creet.id: creet.to_dict() for creet in creets}
+
 
 # Get one creet
 @creet_routes.route('/<int:creet_id>')
@@ -29,16 +32,19 @@ def one_creet(creet_id):
 @login_required
 def create_creet():
     form = CreetForm()
+    data = form.data
     form['csrf_token'].data = request.cookies['csrf_token']
+
     if form.validate_on_submit():
-        
         if "image_url" in request.files:
             image_url = request.files["image_url"]
+
             image_url.filename = upload_file_to_s3(image_url.filename)
 
             upload = upload_file_to_s3(image_url)
 
             if "url" not in upload:
+
                 return upload, 400
 
             image_url = upload["url"]
@@ -48,7 +54,7 @@ def create_creet():
 
         create_creet = Creet(
             user_id=current_user.to_dict()['id'],
-            content=form.content.data,
+            content=data['content'],
             image_url=image_url,
             created_at=datetime.now(),
             updated_at=datetime.now()
@@ -73,7 +79,7 @@ def update_creet(creet_id):
         if "image_url" in request.files:
             image_url = request.files["image_url"]
 
-            image_url.filename = upload_file_to_s3(image_url.filename)
+            image_url.filename = get_unique_filename(image_url.filename)
 
             upload = upload_file_to_s3(image_url)
 

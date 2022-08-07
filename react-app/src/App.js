@@ -14,6 +14,7 @@ import Sidebar from './components/Sidebar';
 import ProfileCreets from './components/Profile';
 import { getUsers } from './store/users';
 import EditCreets from './components/Creets/EditCreets';
+import ViewCreet from './components/ViewCreet';
 
 
 
@@ -25,6 +26,7 @@ function App() {
     (async() => {
       await dispatch(authenticate());
       await dispatch(getUsers());
+      await dispatch(getCreets());
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -57,6 +59,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/creets/edit/:creetId' exact={true} >
           <EditCreets />
+        </ProtectedRoute>
+        <ProtectedRoute path='/creets/:creetId' exact={true} >
+          <ViewCreet />
         </ProtectedRoute>
         <ProtectedRoute path='/' exact={true} >
           <Home/>

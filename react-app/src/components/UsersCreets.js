@@ -22,7 +22,6 @@ const UsersCreets = ({ userId }) => {
     const userInfo = usersArr[userId - 1] // good
     const creets = useSelector(state => state.creet);
     const creetsArr = Object.values(creets);
-    console.log(creetsArr, "creetsarrrrrroo")
     const userCreets = creetsArr.filter(creet => creet.user_id === Number(userId))
     const latestUserCreets = [];
     userCreets.forEach(creet => {

@@ -45,10 +45,6 @@ export const addComment = (comment) => async (dispatch) => {
 
 	const response = await fetch("/api/comments/new", {
 		method: "POST",
-		// headers: {
-		// 	"Content-Type": "application/json",
-		// },
-		// body: JSON.stringify(comment),
 		body: formData
 	});
 

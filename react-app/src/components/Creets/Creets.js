@@ -1,13 +1,14 @@
+import React, { useEffect, useState } from 'react';
 import "./Creets.css";
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import TimeAgo from 'react-timeago'
 import EditCreets from "./EditCreets";
+import EditCreetModal from "./EditCreetModal";
 
 
-const Creets = ({userId, creetId}) => {
+const Creets = () => {
 
     const users = useSelector(state => state.user);
     const sessionUser = useSelector(state => state.session?.user);
@@ -35,13 +36,13 @@ const Creets = ({userId, creetId}) => {
                                                     className="timestamp"
                                                     date={creet.created_at}
                                                     locale='en-US'
-                                                    timeStyle="twitter-first-minute"
+                                                    timestyle="twitter-first-minute"
                                                 />
                                             </div>
                                         </div>
                                     </NavLink>
-                                    {creet.user_id === sessionUser.id && 
-                                        <EditCreets creet_id={creetId} className="all-creets-edit-btn" />
+                                    {creet.user_id === sessionUser.id &&
+                                        <EditCreetModal creetId={creet.id} className="all-creets-edit-btn" />
                                     }
                                 </div>
                                 <div className="feed-creet-container">
