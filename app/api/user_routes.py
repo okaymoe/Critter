@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify, request
 from datetime import datetime
 from flask_login import login_required, login_user
-import profile
 from app.models import User, db
 from app.forms.signup_form import SignUpForm
 from .utils import validation_errors_to_error_messages
