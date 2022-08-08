@@ -14,13 +14,13 @@ def users():
     return {'users': [user.to_dict() for user in users]}
 
 
-@user_routes.route('/<int:id>')
+@user_routes.route('/<int:id>/')
 def user(id):
     user = User.query.get(id)
     return user.to_dict()
     
 
-@user_routes.route('/signup', methods=['POST'])
+@user_routes.route('/signup/', methods=['POST'])
 def sign_up():
     """
     Creates a new user and logs them in

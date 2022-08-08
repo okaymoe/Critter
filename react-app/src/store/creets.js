@@ -95,7 +95,7 @@ export const editingCreet = (editCreet) => async (dispatch) => {
 };
 
 export const eraseCreet = (destroyedCreet) => async (dispatch) => {
-	const response = await fetch(`/api/creets/${destroyedCreet.id}`, {
+	const response = await fetch(`/api/creets/${destroyedCreet.id}/`, {
 		method: "DELETE"
 	});
 
@@ -113,7 +113,7 @@ export const uploadImage = (imageData) => async dispatch => {
 	formData.append("creetId", creetId);
 	formData.append("image", image);
 
-	const res = await fetch('/api/images/upload', {
+	const res = await fetch('/api/images/upload/', {
 		method: "POST",
 		body: formData,
 	});
