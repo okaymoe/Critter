@@ -17,6 +17,7 @@ const CreateCreet = () => {
 
     const updateImage = (e) => {
         const file = e.target.files[0];
+        console.log(file, "this is the fokin file")
         setImage(file);
     }
 
@@ -26,7 +27,6 @@ const CreateCreet = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         const newCreet = {
             user_id: user.id,
             content,

@@ -1,5 +1,6 @@
 const GET_ALL_CREETS = "/creets/GET_ALL_CREETS";
 const CREATE_CREET = "/creets/CREATE_CREET";
+const EDIT_CREET = "/creets/EDIT_CREET";
 const DELETE_CREET = "/creets/DELETE_CREET";
 
 const loadCreets = (creets) => ({
@@ -11,6 +12,11 @@ const createCreet = (creet) => ({
 	type: CREATE_CREET,
 	creet,
 });
+
+const editingCreet = (creet) => ({
+	type: EDIT_CREET,
+	creet
+})
 
 const deleteCreet = (creetId) => ({
 	type: DELETE_CREET,
@@ -62,7 +68,7 @@ export const addCreet = (creet) => async (dispatch) => {
 	}
 };
 
-export const editingCreet = (editCreet) => async (dispatch) => {
+export const editThisCreet = (editCreet) => async (dispatch) => {
 
 	const {
 		user_id,
@@ -83,7 +89,7 @@ export const editingCreet = (editCreet) => async (dispatch) => {
 
 	const data = await response.json();
 	if (response.ok) {
-		dispatch(createCreet(data));
+		dispatch(editingCreet(data));
 		return data;
 	} else if (response.status < 500) {
 		if (data.errors) {
@@ -131,6 +137,8 @@ const creetsReducer = (state = {}, action) => {
 			return allCreets;
 		case CREATE_CREET:
 			return { ...state, [action.creet.id]: action.creet };
+		case EDIT_CREET:
+			return {...state, [action.creet.id]: action.creet};
 		case DELETE_CREET:
 			const newState = { ...state };
 			delete newState[action.creetId];

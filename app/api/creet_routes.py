@@ -38,7 +38,7 @@ def create_creet():
         if "image_url" in request.files:
             image_url = request.files["image_url"]
 
-            image_url.filename = upload_file_to_s3(image_url.filename)
+            image_url.filename = get_unique_filename(image_url.filename)
 
             upload = upload_file_to_s3(image_url)
 
@@ -87,7 +87,7 @@ def update_creet(creet_id):
                 return upload, 400
 
             image_url = upload["url"]
-
+            
         else:
             image_url = None
 

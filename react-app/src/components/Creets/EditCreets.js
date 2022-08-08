@@ -1,7 +1,7 @@
 import "./EditCreets.css";
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { eraseCreet, editingCreet } from "../../store/creets";
+import { eraseCreet, editThisCreet } from "../../store/creets";
 import { useHistory, useParams } from "react-router-dom";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import ClearIcon from '@mui/icons-material/Clear';
@@ -17,6 +17,8 @@ const EditCreets = ({ setShowModal, creet_id }) => {
     const [content, setContent] = useState(editedCreet.content);
     const [image, setImage] = useState(editedCreet.image_url);
 
+    console.log(editedCreet, "what is this?")
+
     const updateImage = (e) => {
         const file = e.target.files[0];
         setImage(file);
@@ -27,12 +29,13 @@ const EditCreets = ({ setShowModal, creet_id }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const editCreet = {
+            
             id: editedCreet.id,
             user_id: user.id,
             content,
             image_url: image
         }
-        await dispatch(editingCreet(editCreet))
+        await dispatch(editThisCreet(editCreet))
         setShowModal(false)
     }
 
@@ -40,8 +43,8 @@ const EditCreets = ({ setShowModal, creet_id }) => {
         e.preventDefault();
         dispatch(eraseCreet(editedCreet))
         setShowModal(false)
-        if (history.location.pathname === (`/users/${user.id}`)) {
-            history.push(`/users/${user.id}`)
+        if (history.location.pathname === (`/users/${user.id}/`)) {
+            history.push(`/users/${user.id}/`)
         } else { history.push("/") }
     }
 
@@ -60,8 +63,12 @@ const EditCreets = ({ setShowModal, creet_id }) => {
                         <div className={!image ? "edit-creet-img-upload-container" : "edit-creet-img-upload-container-off"}>
                             {!image &&
                                 <label className="edit-creet-img-upload-label"><ImageIcon className="edit-creet-img-icon" />
-                                    <input className="edit-creet-img-input" type="file" name="file"
-                                        accept="image/png, image/jpeg, image/jpg" onChange={updateImage} />
+                                    <input 
+                                    className="edit-creet-img-input" 
+                                    type="file" 
+                                    name="file"
+                                    accept="image/png, image/jpeg, image/jpg" 
+                                    onChange={updateImage} />
                                 </label>
 
                             }
