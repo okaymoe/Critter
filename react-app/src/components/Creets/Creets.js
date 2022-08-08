@@ -63,7 +63,7 @@ const Creets = () => {
                                     <div className='feed-creet-icon-and-stat'>
                                         <AddCommentIcon />
                                         <p className='feed-creet-stat'>
-                                            {/* NumberOfComments component *makenext* creetId={creet.id}  */}
+                                            {/*figure out how to display comment length w/out component*/}
                                         </p>
                                     </div>
                                 </div>
