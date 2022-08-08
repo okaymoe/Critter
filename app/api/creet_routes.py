@@ -10,14 +10,14 @@ creet_routes = Blueprint('creets', __name__)
 
 
 # Grab all creets - no specific query
-@creet_routes.route('')
+@creet_routes.route('/')
 def all_creets():
     creets = Creet.query.all()
     return {creet.id: creet.to_dict() for creet in creets}
 
 
 # Get one creet
-@creet_routes.route('/<int:creet_id>')
+@creet_routes.route('/<int:creet_id>/')
 # @login_required
 def one_creet(creet_id):
     creet = Creet.query.get(creet_id)
@@ -66,7 +66,7 @@ def create_creet():
 
 
 # Updating a user Creet
-@creet_routes.route('/edit/<int:creet_id>', methods=['PUT'])
+@creet_routes.route('/edit/<int:creet_id>/', methods=['PUT'])
 @login_required
 def update_creet(creet_id):
     creet = Creet.query.get(creet_id)
@@ -102,7 +102,7 @@ def update_creet(creet_id):
 
 
 # Route deletes a creet for a user
-@creet_routes.route('/<int:creet_id>', methods=['DELETE'])
+@creet_routes.route('/<int:creet_id>/', methods=['DELETE'])
 @login_required
 def delete_creet(creet_id):
     creet = Creet.query.get(creet_id)

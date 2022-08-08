@@ -18,7 +18,7 @@ const deleteCreet = (creetId) => ({
 });
 
 export const getCreets = () => async (dispatch) => {
-	const response = await fetch("/api/creets");
+	const response = await fetch("/api/creets/");
 
 	if (response.ok) {
 		const creetList = await response.json();
@@ -41,7 +41,7 @@ export const addCreet = (creet) => async (dispatch) => {
 	formData.append("user_id", user_id);
 	formData.append("image_url", image_url);
 
-	const response = await fetch("/api/creets/new", {
+	const response = await fetch("/api/creets/new/", {
 		method: "POST",
 		body: formData
 	});
