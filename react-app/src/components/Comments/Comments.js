@@ -2,7 +2,7 @@ import "./Comments.css";
 import React from 'react'
 import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import EditCommentModal from "./EditCommentModal";
+import EditCommentModal from "./EditCommentModal";
 import TimeAgo from 'react-timeago'
 
 const Comments = () => {
@@ -40,9 +40,9 @@ const Comments = () => {
                                             </p>
                                         </div>
                                     </Link>
-                                    {/* {comment.user_id === sessionUser.id &&
+                                    {comment.user_id === sessionUser.id &&
                                         <EditCommentModal commentId={comment.id} className="all-comments-edit-btn" />
-                                    } */}
+                                    }
                                 </div>
                                 <div className="feed-comment-container">
                                     <Link className="comment-link" to={`/comments/${comment.id}`}>

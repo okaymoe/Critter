@@ -15,6 +15,10 @@ import ProfileCreets from './components/Profile';
 import { getUsers } from './store/users';
 import EditCreets from './components/Creets/EditCreets';
 import ViewCreet from './components/ViewCreet';
+import EditComment from './components/Comments/EditComment';
+import { getComments } from './store/comments';
+import OneComment from './components/Comments/OneComment';
+import ViewComment from './components/ViewComment';
 
 
 
@@ -27,6 +31,7 @@ function App() {
       await dispatch(authenticate());
       await dispatch(getUsers());
       await dispatch(getCreets());
+      await dispatch(getComments());
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -62,6 +67,12 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/creets/:creetId' exact={true} >
           <ViewCreet />
+        </ProtectedRoute>
+        <ProtectedRoute path='/comments/edit/:commentId' exact={true} >
+          <EditComment />
+        </ProtectedRoute>
+        <ProtectedRoute path='/comments/:commentId' exact={true} >
+          <ViewComment />
         </ProtectedRoute>
         <ProtectedRoute path='/' exact={true} >
           <Home/>
