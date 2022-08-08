@@ -12,7 +12,7 @@ const createUser = (user) => ({
 })
 
 export const getUsers = () => async (dispatch) => {
-    const response = await fetch("/api/users");
+    const response = await fetch("/api/users/");
     if (response.ok) {
         const userList = await response.json();
         dispatch(loadUsers(userList));
@@ -21,7 +21,7 @@ export const getUsers = () => async (dispatch) => {
 };
 
 export const newUser = (user) => async (dispatch) => {
-    const response = await fetch("/api/users/signup", {
+    const response = await fetch("/api/users/signup/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -73,7 +73,7 @@ export const editingUsers = (editUser) => async (dispatch) => {
     formData.append("location", location);
     formData.append("joined", joined);
 
-    const response = await fetch(`/api/users/edit/${editUser.id}`, {
+    const response = await fetch(`/api/users/edit/${editUser.id}/`, {
         method: "PUT",
         body: formData
     });

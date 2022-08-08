@@ -27,7 +27,7 @@ def one_creet(creet_id):
         return "Sorry, we can't find this Creet..."
 
 # Creating a Creet
-@creet_routes.route('/new', methods=['POST'])
+@creet_routes.route('/new/', methods=['POST'])
 @login_required
 def create_creet():
     form = CreetForm()
