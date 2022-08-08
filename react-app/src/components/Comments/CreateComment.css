@@ -151,7 +151,7 @@
 .add-img-btn {
     height: 25px;
     width: 25px;
-    color: #b83dba;
+    color: var(--app-color);
     cursor: pointer;
     transition: ease-out;
     transition-duration: 150ms;

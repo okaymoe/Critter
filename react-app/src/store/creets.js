@@ -111,25 +111,6 @@ export const eraseCreet = (destroyedCreet) => async (dispatch) => {
 };
 
 
-// AWS upload images
-export const uploadImage = (imageData) => async dispatch => {
-	const { creetId, image } = imageData;
-
-	const formData = new FormData();
-	formData.append("creetId", creetId);
-	formData.append("image", image);
-
-	const res = await fetch('/api/images/upload/', {
-		method: "POST",
-		body: formData,
-	});
-
-	if (res.ok) {
-		return await res.json();
-	}
-}
-
-
 const creetsReducer = (state = {}, action) => {
 	switch (action.type) {
 		case GET_ALL_CREETS:
