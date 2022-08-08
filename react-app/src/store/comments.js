@@ -64,7 +64,7 @@ export const addComment = (comment) => async (dispatch) => {
 	}
 };
 
-export const editingComment = (editComment) => async (dispatch) => {
+export const editThisComment = (editComment) => async (dispatch) => {
 
 	const {
 		content,

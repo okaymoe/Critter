@@ -3,15 +3,14 @@ from flask import Blueprint, request
 from flask_login import login_required, current_user
 from app.models import Creet, db
 from app.forms.creet_form import CreetForm
-from app.s3_helpers import (
-upload_file_to_s3, allowed_file, get_unique_filename)
+from app.s3_helpers import upload_file_to_s3, get_unique_filename
 from .utils import validation_errors_to_error_messages
 
 creet_routes = Blueprint('creets', __name__)
 
 
 # Grab all creets - no specific query
-@creet_routes.route('/')
+@creet_routes.route('')
 def all_creets():
     creets = Creet.query.all()
     return {creet.id: creet.to_dict() for creet in creets}

@@ -30,8 +30,8 @@ export const getCreets = () => async (dispatch) => {
 export const addCreet = (creet) => async (dispatch) => {
 
 	const {
-		user_id,
 		content,
+		user_id,
 		image_url
 	} = creet;
 
@@ -65,8 +65,8 @@ export const addCreet = (creet) => async (dispatch) => {
 export const editingCreet = (editCreet) => async (dispatch) => {
 
 	const {
-		content,
 		user_id,
+		content,
 		image_url
 	} = editCreet;
 
@@ -84,7 +84,7 @@ export const editingCreet = (editCreet) => async (dispatch) => {
 	const data = await response.json();
 	if (response.ok) {
 		dispatch(createCreet(data));
-		return null;
+		return data;
 	} else if (response.status < 500) {
 		if (data.errors) {
 			return data.errors;

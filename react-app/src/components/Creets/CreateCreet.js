@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { addCreet } from "../../store/creets";
@@ -11,7 +10,7 @@ const CreateCreet = () => {
 
     const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState("");
     const [content, setContent] = useState('');
 
     const contentHandler = (e) => setContent(e.target.value);

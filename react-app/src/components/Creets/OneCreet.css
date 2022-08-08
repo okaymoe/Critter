@@ -90,7 +90,6 @@
 
 .single-creet {
     text-decoration: none;
-    color: white;
     font-size: 23px;
     padding-left: 10px;
     font-family: 'Lucida Sans Unicode';
@@ -100,7 +99,6 @@
     resize: none;
     border: none;
     outline: none;
-    background-color: transparent;
     overflow-x: hidden;
     word-wrap: break-word;
 }

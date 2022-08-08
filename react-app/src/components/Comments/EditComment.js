@@ -2,7 +2,7 @@ import "./EditComment.css";
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { eraseComment, editingComment } from "../../store/comments";
+import { eraseComment, editThisComment } from "../../store/comments";
 import ClearIcon from '@mui/icons-material/Clear';
 import ImageIcon from '@mui/icons-material/Image';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
@@ -10,8 +10,11 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 const EditComment = ({ setShowModal, comment_id }) => {
 
     const allComments = useSelector(state => state.comment);
+    console.log(allComments, "THIS IS THE ALLLL COMMENTS")
     const editedComment = allComments[comment_id] || {};
-    const creetId = editedComment?.creet?.id
+    console.log(editedComment, "THIS IS THE EDITED COMMENT")
+    const creetId = editedComment?.creet_id?.id
+    console.log(creetId, "THIS IS THE CREETID")
     const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -34,7 +37,7 @@ const EditComment = ({ setShowModal, comment_id }) => {
             content,
             image_url: image
         }
-        await dispatch(editingComment(editingComment))
+        await dispatch(editThisComment(editingComment))
         setShowModal(false)
     }
 

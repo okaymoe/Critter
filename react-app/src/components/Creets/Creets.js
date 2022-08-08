@@ -50,6 +50,11 @@ const Creets = () => {
                                         <div className="feed-creet">
                                             {creet.content.split('\n').map(line => (<div key={line.id} id={creet.id} className="feed-creet-content-lines">{line}</div>))}
                                         </div>
+                                        {creet.image_url &&
+                                            <div className='feed-creet-img-container'>
+                                                <img className='feed-creet-img' src={creet.image_url} alt='' />
+                                            </div>
+                                        }
                                     </NavLink>
                                 </div>
                             </div>
@@ -58,7 +63,7 @@ const Creets = () => {
                                     <div className='feed-creet-icon-and-stat'>
                                         <AddCommentIcon />
                                         <p className='feed-creet-stat'>
-                                            {/* <NumberOfComments creetId={creet.id} /> */}
+                                            {/* NumberOfComments component *makenext* creetId={creet.id}  */}
                                         </p>
                                     </div>
                                 </div>

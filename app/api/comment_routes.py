@@ -57,7 +57,6 @@ def create_comment():
 
 # Route updates a comment for user
 @comment_routes.route('/edit/<int:comment_id>', methods=['PUT'])
-@login_required
 def update_comment(comment_id):
     comment = Comment.query.get(comment_id)
     form = CommentForm()
