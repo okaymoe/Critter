@@ -36,11 +36,11 @@ function App() {
     })();
   }, [dispatch]);
 
-  useEffect(() => {
-    (async () => {
-      await dispatch(getUsers());
-    })();
-  }, [dispatch]);
+  // useEffect(() => {
+  //   (async () => {
+  //     await dispatch(getUsers());
+  //   })();
+  // }, [dispatch]);
 
   if (!loaded) {
     return null;
