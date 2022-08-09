@@ -66,7 +66,7 @@ def create_creet():
 
 
 # Updating a user Creet
-@creet_routes.route('/edit/<int:creet_id>/', methods=['PUT'])
+@creet_routes.route('/edit/<int:creet_id>', methods=['PUT'])
 @login_required
 def update_creet(creet_id):
     creet = Creet.query.get(creet_id)

@@ -37,6 +37,7 @@ const EditCreets = ({ setShowModal, creet_id }) => {
             image_url: image
         }
         await dispatch(editThisCreet(editCreet))
+        setImage(image)
         setShowModal(false)
     }
 

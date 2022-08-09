@@ -82,7 +82,7 @@ export const editThisCreet = (editCreet) => async (dispatch) => {
 	formData.append("user_id", user_id);
 	formData.append("image_url", image_url);
 
-	const response = await fetch(`/api/creets/edit/${editCreet.id}/`, {
+	const response = await fetch(`/api/creets/edit/${editCreet.id}`, {
 		method: "PUT",
 		body: formData
 	});
