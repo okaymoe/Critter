@@ -10,11 +10,8 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 const EditComment = ({ setShowModal, comment_id }) => {
 
     const allComments = useSelector(state => state.comment);
-    console.log(allComments, "THIS IS THE ALLLL COMMENTS")
     const editedComment = allComments[comment_id] || {};
-    console.log(editedComment, "THIS IS THE EDITED COMMENT")
     const creetId = editedComment?.creet_id?.id
-    console.log(creetId, "THIS IS THE CREETID")
     const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const history = useHistory();

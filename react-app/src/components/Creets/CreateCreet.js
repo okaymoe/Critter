@@ -17,7 +17,6 @@ const CreateCreet = () => {
 
     const updateImage = (e) => {
         const file = e.target.files[0];
-        console.log(file, "this is the fokin file")
         setImage(file);
     }
 

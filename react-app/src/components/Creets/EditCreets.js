@@ -16,11 +16,12 @@ const EditCreets = ({ setShowModal, creet_id }) => {
     const history = useHistory();
     const [content, setContent] = useState(editedCreet.content);
     const [image, setImage] = useState(editedCreet.image_url);
+    
 
-    console.log(editedCreet, "what is this?")
 
     const updateImage = (e) => {
         const file = e.target.files[0];
+        console.log(file, "this iss the fileeeee")
         setImage(file);
     }
 
@@ -39,6 +40,7 @@ const EditCreets = ({ setShowModal, creet_id }) => {
         setShowModal(false)
     }
 
+
     const deleteHandler = (e, creet) => {
         e.preventDefault();
         dispatch(eraseCreet(editedCreet))
@@ -47,6 +49,7 @@ const EditCreets = ({ setShowModal, creet_id }) => {
             history.push(`/users/${user.id}/`)
         } else { history.push("/") }
     }
+    console.log(image, "this is the image")
 
     return (
         <div className="edit-creet-wrap">
