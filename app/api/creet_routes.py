@@ -17,7 +17,7 @@ def all_creets():
 
 
 # Get one creet
-@creet_routes.route('/<int:creet_id>/')
+@creet_routes.route('/<int:creet_id>')
 # @login_required
 def one_creet(creet_id):
     creet = Creet.query.get(creet_id)
@@ -27,7 +27,7 @@ def one_creet(creet_id):
         return "Sorry, we can't find this Creet..."
 
 # Creating a Creet
-@creet_routes.route('/new/', methods=['POST'])
+@creet_routes.route('/new', methods=['POST'])
 @login_required
 def create_creet():
     form = CreetForm()
@@ -102,7 +102,7 @@ def update_creet(creet_id):
 
 
 # Route deletes a creet for a user
-@creet_routes.route('/<int:creet_id>/', methods=['DELETE'])
+@creet_routes.route('/<int:creet_id>', methods=['DELETE'])
 @login_required
 def delete_creet(creet_id):
     creet = Creet.query.get(creet_id)
