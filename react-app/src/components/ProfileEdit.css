@@ -1,0 +1,136 @@
+.edit-profile-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 600px;
+    height: 550px;
+}
+
+.edit-profile-header {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(154, 154, 154);
+    padding-bottom: 8px;
+}
+
+.edit-profile-btn-and-title {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans Unicode';
+}
+
+.edit-close-btn {
+    height: 20px;
+    width: 20px;
+}
+
+.edit-close-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.edit-close-btn-container:hover {
+    background-color: var(--app-color);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.edit-title-txt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+.edit-profile-sumbit-btn {
+    font-family: 'Lucida Sans Unicode';
+    width: 70px;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+    font-weight: bold;
+    color: var(--app-color);
+    cursor: pointer;
+}
+
+.edit-profile-sumbit-btn:hover {
+    background-color: rgb(63, 97, 112);
+}
+
+.edit-profile-birthday-input {
+    color: black;
+    margin-right: 50px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+
+.edit-profile-errors {
+    color: #ff0000;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.edit-profile-form {
+    color: rgb(255, 0, 0);
+    font-family: 'Lucida Sans Unicode';
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.edit-profile-input {
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans Unicode';
+    background-color: transparent;
+    border: none;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    width: 95%;
+    overflow-y: scroll;
+    text-overflow: ellipsis;
+    resize: none;
+    margin-right: 38px;
+    outline: none;
+}
+
+.edit-profile-input::-webkit-scrollbar {
+    display: none;
+}
+
+.edit-label {
+    margin: 8px;
+    margin-bottom: 0px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgb(154, 154, 154);
+}
+
+.edit-profile-field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 25px;
+}
+
+.edit-profile-field-container:focus-within {
+    border: 2px var(--app-color) solid;
+}

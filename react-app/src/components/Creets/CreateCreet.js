@@ -45,7 +45,7 @@ const CreateCreet = () => {
             <form className="addCreetForm" onSubmit={handleSubmit}>
                 <div className="addCreet-sections">
                     <div className="addCreet-section1">
-                        <img className='creet-profile-img-add' src={user.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : user.profile_img} alt="" />
+                        <img className='creet-profile-img-add' src={user.profile_img === '' ? 'https://i.pinimg.com/originals/be/8d/27/be8d2760940422c69bb64e2833f012ed.jpg' : user.profile_img} alt="" />
                         <textarea
                             className="addCreet-input"
                             type="text"

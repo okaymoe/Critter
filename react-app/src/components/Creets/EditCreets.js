@@ -20,6 +20,7 @@ const EditCreets = ({ setShowModal, creet_id }) => {
 
 
     const updateImage = (e) => {
+
         const file = e.target.files[0];
         console.log(file, "this iss the fileeeee")
         setImage(file);

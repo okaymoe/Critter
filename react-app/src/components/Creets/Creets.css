@@ -1,5 +1,4 @@
 .creets-wrap {
-    border-top: 1px solid rgb(84, 84, 84);
     width: 500px;
 }
 
@@ -17,14 +16,15 @@
 }
 
 .creets {
-    width: 500px;
+    width: 590px;
     display: grid;
     grid-template-columns: 1fr 12fr;
-    border-bottom: 1px solid rgb(84, 84, 84);
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgb(170, 170, 170);
 }
 
 .all-creets-everything-minus-pic {
-    width: 440px;
+    width: 550px;
     display: flex;
     flex-direction: column;
 }
@@ -69,7 +69,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 425px;
+    width: 500px;
 }
 
 .feed-creet-display-name {
@@ -137,9 +137,9 @@
 }
 
 .feed-creet-content-lines {
-    width: 405px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    width: 600px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .feed-creet-stat {

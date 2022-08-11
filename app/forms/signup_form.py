@@ -20,13 +20,13 @@ def username_unique(form, field):
 
 
 class SignUpForm(FlaskForm):
-    name = StringField('Name', validators=[DataRequired("Name must be between 1 and 50 characters"), Length(min=1, max=50, message="Display name must be between 1 and 50 characters.")])
-    username = StringField('Username', validators=[DataRequired("Username must be between 1 and 30 characters"), Length(min=1, max=15, message="Username must be between 1 and 15 characters"), username_unique])
+    name = StringField('Name', validators=[DataRequired(), Length(min=1, max=50, message="Display name must be between 1 and 50 characters.")])
+    username = StringField('Username', validators=[DataRequired(), Length(min=1, max=15, message="Username must be between 1 and 15 characters"), username_unique])
     bio = StringField("Bio")
     profile_img = StringField("Profile Picture")
     header_img = StringField("Header Photo")
-    email = StringField('Email', validators=[DataRequired("Email must be between 1 and 255 characters"), e_mail_not_used, Email("Enter a valid email address")])
-    hashed_password = StringField('Password', validators=[DataRequired("Password must be between 8 and 25 characters"), Length(min=7, max=30, message="Password must be between 7 and 30 characters")])
+    email = StringField('Email', validators=[DataRequired(), e_mail_not_used, Email("Enter a valid email address")])
+    password = StringField('Password', validators=[DataRequired(), Length(min=7, max=30, message="Password must be between 7 and 30 characters")])
     header = StringField("Header Photo")
     birthday = DateField("Birthday")
     location = StringField("Location")

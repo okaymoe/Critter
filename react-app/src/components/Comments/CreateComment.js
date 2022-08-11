@@ -48,7 +48,7 @@ const CreateComment = () => {
     return (
         <div className="add-comment-wrap">
             <form onSubmit={handleSubmit} className="add-comment-form">
-                <img className='add-comment-profile-pic' alt='' src={user.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : user.profile_img} />
+                <img className='add-comment-profile-pic' alt='' src={user.profile_img === '' ? 'https://i.pinimg.com/originals/be/8d/27/be8d2760940422c69bb64e2833f012ed.jpg' : user.profile_img} />
                 <div className="add-comment-both-halves">
                     <div className="add-comment-first-half">
                         <textarea

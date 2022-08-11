@@ -1,4 +1,4 @@
-.creet-edit-btn {
+.profile-edit-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,11 +7,17 @@
     height: 20px;
     color: var(--app-color);
     border: none;
-    margin-left: 0px;
+    margin-right: 10px;
     cursor: pointer;
+    margin-top: 45px;
 }
 
-.creet-edit-btn:hover {
+#editthisbutton {
+    height: 35px;
+    width: 35px;
+}
+
+.profile-edit-btn:hover {
     color: var(--app-color);
     background-color: #fafafa;
     transition: all;

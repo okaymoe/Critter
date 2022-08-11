@@ -1,6 +1,7 @@
 .profile-creets-wrap {
-    border-top: 1px solid rgb(84, 84, 84);
-    width: 500px;
+    border-top: 8px solid var(--app-background);
+    width: 600px;
+    flex: 0.4;
 }
 
 .profile-creets:hover {
@@ -17,11 +18,11 @@
 }
 
 .profile-creets {
-    width: 500px;
+    width: 600px;
     display: grid;
     grid-template-columns: 1fr 12fr;
     padding-top: 15px;
-    border-bottom: 1px solid rgb(84, 84, 84);
+    border-bottom: 1px solid rgb(170, 170, 170);
 }
 
 .profile-creet-link {
@@ -46,7 +47,7 @@
 }
 
 .profile-feed-creet-username-and-edit-btn {
-    width: 430px;
+    width: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;

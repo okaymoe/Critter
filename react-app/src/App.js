@@ -19,6 +19,7 @@ import EditComment from './components/Comments/EditComment';
 import { getComments } from './store/comments';
 import OneComment from './components/Comments/OneComment';
 import ViewComment from './components/ViewComment';
+import Splash from './components/Splash';
 
 
 
@@ -48,8 +49,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
       <Switch>
+        <Route path='/home' exact={true}>
+          <Home />
+        </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
@@ -74,9 +77,9 @@ function App() {
         <ProtectedRoute path='/comments/:commentId' exact={true} >
           <ViewComment />
         </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-          <Home/>
-        </ProtectedRoute>
+        <Route path='/' exact={true} >
+          <Splash/>
+        </Route>
       </Switch>
     </BrowserRouter>
   );

@@ -1,0 +1,24 @@
+.profile {
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.profilecontent {
+    flex: 0.4;
+    border-right: 1px solid var(--app-background);
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.profilecontent::-webkit-scrollbar {
+    display: none;
+  }
+
+.profilecontent {
+-ms-overflow-style: none; /* IE and Edge */
+scrollbar-width: none; /* Firefox */
+}

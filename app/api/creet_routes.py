@@ -10,7 +10,7 @@ creet_routes = Blueprint('creets', __name__)
 
 
 # Grab all creets - no specific query
-@creet_routes.route('/')
+@creet_routes.route('')
 def all_creets():
     creets = Creet.query.all()
     return {creet.id: creet.to_dict() for creet in creets}

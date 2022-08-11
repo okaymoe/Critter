@@ -12,6 +12,7 @@ import { getComments } from '../store/comments';
 import { getUsers } from '../store/users';
 import { authenticate } from '../store/session';
 import { useSelector } from 'react-redux';
+import LogoutButton from './auth/LogoutButton';
 
 
 const Sidebar = () => {
@@ -41,14 +42,13 @@ const Sidebar = () => {
             />
             <i class="fas fa-paw"></i>
             <NavLink style={{textDecoration: 'none'}}id="profilenav" to='/'> 
-            <SidebarComponent className="homeicon" text="Home" Icon={<HomeIcon/>}/>
+                <SidebarComponent className="homeicon" text="Home" Icon={<HomeIcon/>}/>
             </NavLink>
             
             <NavLink style={{textDecoration: 'none'}} id="profilenav" to={`/users/${sessionUser.id}`}> 
-            <SidebarComponent text="Profile" Icon={<AccountCircleIcon/>}/>
+                <SidebarComponent text="Profile" Icon={<AccountCircleIcon/>}/>
             </NavLink>
-        
-
+            <LogoutButton/>
             <Button variant="outlined" className="sidebar-creet" fullWidth>
                 Creet
             </Button>

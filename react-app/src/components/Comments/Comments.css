@@ -20,7 +20,7 @@
     width: 500px;
     display: grid;
     grid-template-columns: 1fr 12fr;
-    border-bottom: 1px solid rgb(84, 84, 84);
+    border-bottom: 1px solid rgb(170, 170, 170);
 }
 
 .all-comments-everything-minus-pic {

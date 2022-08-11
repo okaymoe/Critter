@@ -9,12 +9,6 @@ import { getUsers } from '../store/users';
 import { authenticate } from '../store/session';
 import EditCreetModal from './Creets/EditCreetModal';
 
-// import EditCreetModal from '../../Timeline/Creets/EditCreetModal';
-// import { BiMessage } from 'react-icons/bi';
-// import { FaRetweet } from 'react-icons/fa';
-// import { FiHeart, FiShare } from 'react-icons/fi';
-// import NumberOfComments from '../../Timeline/Comments/NumberOfComments/NumberOfComments';
-
 const UsersCreets = ({ userId }) => {
 
     const users = useSelector(state => state.user); //good 
@@ -70,7 +64,7 @@ const UsersCreets = ({ userId }) => {
                                 <div className="profile-feed-creet-icons">
                                     <div className='profile-feed-creet-icon-and-stat'>
                                         <AddCommentIcon />
-                                        {/* <p className='profile-feed-creet-stat'><NumberOfComments creetId={creet.id} /></p> */}
+                                        {/* Comment amount */}
                                     </div>
                                 </div>
                             </NavLink>
