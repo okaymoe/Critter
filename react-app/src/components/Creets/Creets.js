@@ -22,7 +22,7 @@ const Creets = () => {
                 return (
                     <div key={creet.id} className="creets">
                         <NavLink className="all-creets-profile-pic-link" to={`/users/${creet.user_id}`}>
-                            <img className='all-creets-profile-pic' src={users[creet.user_id]?.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : users[creet.user_id]?.profile_img} alt='' />
+                            <img className='all-creets-profile-pic' src={users[creet.user_id]?.profile_img === '' ? 'https://i.pinimg.com/originals/be/8d/27/be8d2760940422c69bb64e2833f012ed.jpg' : users[creet.user_id]?.profile_img} alt='' />
                         </NavLink>
                         <div className="all-creets-everything-minus-pic">
                             <div className="feed-creet-names-edit-and-content">

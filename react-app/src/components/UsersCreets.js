@@ -27,7 +27,7 @@ const UsersCreets = ({ userId }) => {
             {latestUserCreets?.map(creet => {
                 return (
                     <div key={creet.id} className="profile-creets">
-                        <img className='profile-creets-profile-pic' alt='' src={userInfo?.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : userInfo?.profile_img} />
+                        <img className='profile-creets-profile-pic' alt='' src={userInfo?.profile_img === '' ? 'https://i.pinimg.com/originals/be/8d/27/be8d2760940422c69bb64e2833f012ed.jpg' : userInfo?.profile_img} />
                         <div className='profile-creets-everything-minus-pic'>
                             <div className="profile-feed-creet-username-and-edit-btn">
                                 <NavLink className="profile-creet-link" to={`/creets/${creet.id}`}>

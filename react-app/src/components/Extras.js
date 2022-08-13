@@ -1,10 +1,11 @@
 import React from 'react'
 import "./Extras.css"
+import FactDisplay from './Extras/FactDisplay';
 
 const Extras = () => {
     return (
         <div className="extras">
-            <h1>extras</h1>
+            <FactDisplay/>
         </div>
     );
 }

@@ -50,7 +50,7 @@ const SidebarCreet = ({ setShowModal }) => {
                 <p className='sidebar-add-creet-title'>Create a Creet</p>
             </div>
             <form onSubmit={handleSubmit} className="sidebar-add-creet-form">
-                <img className='sidebar-add-creet-profile-pic' src={user.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : user.profile_img} alt="" />
+                <img className='sidebar-add-creet-profile-pic' src={user.profile_img === '' ? 'https://i.pinimg.com/originals/be/8d/27/be8d2760940422c69bb64e2833f012ed.jpg' : user.profile_img} alt="" />
                 <div className="sidebar-add-creet-both-halves">
                     <div className="sidebar-add-creet-first-half">
                         <textarea

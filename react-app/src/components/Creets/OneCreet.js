@@ -31,7 +31,7 @@ const OneCreet = () => {
             <div className="single-creet-block">
                 <div className='single-creet-pic-names-and-edit'>
                     <div className='single-creet-pic-and-names'>
-                        <img className='single-creet-profile-pic' src={users[creet.user_id]?.profile_img === '' ? 'https://i.pinimg.com/736x/7c/ee/6f/7cee6fa507169843e3430a90dd5377d4.jpg' : users[creet.user_id]?.profile_img} alt="" />
+                        <img className='single-creet-profile-pic' src={users[creet.user_id]?.profile_img === '' ? 'https://i.pinimg.com/originals/be/8d/27/be8d2760940422c69bb64e2833f012ed.jpg' : users[creet.user_id]?.profile_img} alt="" />
                         <div className='single-creet-names'>
                             <p className='single-creet-display-name'>{users[creet.user_id]?.name}</p>
                             <p className='single-creet-username'>@{users[creet.user_id]?.username}</p>
