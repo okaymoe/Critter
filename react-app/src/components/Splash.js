@@ -1,9 +1,9 @@
 import React from 'react';
-// import SplashSignupModal from "./SplashSignupModal";
-// import SplashLoginModal from './SplashLoginModal';
+import SignupModal from "../components/auth/SignupModal";
+import LoginModal from '../components/auth/LoginModal';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-// import DemoUser from '../auth/DemoUser/DemoUser';
+import DemoUser from '../components/auth/DemoUser';
 import './Splash.css';
 import { Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -37,31 +37,31 @@ const Splash = () => {
                             <i class="fas fa-paw" id="mylogo"></i>
                             </div>
                             <p className='SplashSlogan'>Critter</p>
-                            <p className='SplashText'>Join Critter today.</p>
+                            <p className='SplashText'>Join today.</p>
                             <div className='SplashSignupContainer'>
-                                {/* <DemoUser /> */}
+                                <DemoUser />
                                 <div className='SplashBorderManipulation'>
                                     <div className='SplashBorder'></div>
                                     <p className='SplashBorderOr'>or</p>
                                     <div className='SplashBorder'></div>
                                 </div>
-                                <SignUpForm/>
+                                <SignupModal/>
                             </div>
                             <div className='SplashLoginContainer'>
                                 <p className='SplashAccText'>Already have an account?</p>
-                                <LoginForm/>
+                                <LoginModal/>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* <footer className='SplashFooter'>
+                <footer className='SplashFooter'>
                     <a className='SplashAbout' href='https://github.com/okaymoe'>Github
                     <GitHubIcon className='SplashGithub' />
                     </a>
                     <a className='SplashAbout' href='https://www.linkedin.com/in/mohamadamirhussein/'>Linkedin
                     <LinkedIn className='SplashLinkedin' />
                     </a>
-                </footer> */}
+                </footer>
             </div>
         </>
     )

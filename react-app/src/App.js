@@ -10,7 +10,7 @@ import User from './components/Profile';
 import { authenticate } from './store/session';
 import { getCreets } from './store/creets';
 import Home from './components/Home';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import ProfileCreets from './components/Profile';
 import { getUsers } from './store/users';
 import EditCreets from './components/Creets/EditCreets';
@@ -37,27 +37,16 @@ function App() {
     })();
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     await dispatch(getUsers());
-  //   })();
-  // }, [dispatch]);
-
   if (!loaded) {
     return null;
   }
 
   return (
     <BrowserRouter>
+
       <Switch>
-        <Route path='/home' exact={true}>
-          <Home />
-        </Route>
-        <Route path='/login' exact={true}>
-          <LoginForm />
-        </Route>
-        <Route path='/sign-up' exact={true}>
-          <SignUpForm />
+        <Route path="/" exact={true}>
+            <Splash />
         </Route>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
@@ -77,11 +66,12 @@ function App() {
         <ProtectedRoute path='/comments/:commentId' exact={true} >
           <ViewComment />
         </ProtectedRoute>
-        <Route path='/' exact={true} >
-          <Splash/>
-        </Route>
+        <ProtectedRoute path='/home' exact={true}>
+          <Home/>
+        </ProtectedRoute>
       </Switch>
     </BrowserRouter>
+
   );
 }
 

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { useSelector, useDispatch } from 'react-redux'
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 import { signUp } from '../../store/session';
+import './SignUpForm.css';
 
-const SignUpForm = () => {
+const SignUpForm = ({ setShowModal }) => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
   const [name, setName] = useState('');
@@ -12,14 +14,55 @@ const SignUpForm = () => {
   const [repeatPassword, setRepeatPassword] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onSignUp = async (e) => {
     e.preventDefault();
-    if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, name, email, password));
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const validationErrors = [];
+
+    if (name.length <= 20 &&
+      name.length >= 4 &&
+      username.length <= 40 &&
+      username.length >= 4 &&
+      email.length <= 40 &&
+      email.length >= 9 &&
+      email.match(emailRegex) &&
+      password.length <= 255 &&
+      password.length >= 8 &&
+      password === repeatPassword
+    ) {
+      const data = await dispatch(signUp(name, username, email, password));
       if (data) {
         setErrors(data)
+      } else {
+        setShowModal(false);
+        history.push('/')
       }
+    } else {
+      if (name.length < 1 || name.length > 50) {
+        validationErrors.push("Name must be between 1 and 50 characters");
+      }
+      if (username.length < 4 || username.length > 40) {
+        validationErrors.push("Username must be between 1 and 15 characters");
+      }
+      if (email && !email.match(emailRegex)) {
+        validationErrors.push("Email is not a valid email");
+      }
+      if (email.length < 7 || email.length > 30) {
+        validationErrors.push("Email must be between 7 and 30 characters");
+      }
+      if (password.length < 7 || password.length > 30) {
+        validationErrors.push("Password must be between 7 and 30 characters");
+      }
+      if (password.length > 30) {
+        validationErrors.push("Password must be less than 30 characters");
+      } else {
+        if (password !== repeatPassword) {
+          validationErrors.push('Passwords do not match');
+        }
+      }
+      setErrors(validationErrors);
     }
   };
 
@@ -44,64 +87,87 @@ const SignUpForm = () => {
   };
 
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/'/>;
   }
 
   return (
-    <form onSubmit={onSignUp}>
-      <div>
-        {errors.map((error, ind) => (
-          <div key={ind}>{error}</div>
-        ))}
+    <div className='SignupWrapper'>
+      <div className='SignupHeader'>
+        <div className='SignupTitle'>
+          <div onClick={() => setShowModal(false)} className='SignupCloseButtonContainer'>
+            <HighlightOffIcon className='SignupCloseButton' />
+          </div>
+          <p className='SignUpTitleText'>Create your account</p>
+        </div>
       </div>
-      <div>
-        <label>Username</label>
-        <input
-          type='text'
-          name='username'
-          onChange={updateUsername}
-          value={username}
-        ></input>
-      </div>
-      <div>
-        <label>Name</label>
-        <input
-          type='text'
-          name='name'
-          onChange={updateName}
-          value={name}
-        ></input>
-      </div>
-      <div>
-        <label>Email</label>
-        <input
-          type='text'
-          name='email'
-          onChange={updateEmail}
-          value={email}
-        ></input>
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type='password'
-          name='password'
-          onChange={updatePassword}
-          value={password}
-        ></input>
-      </div>
-      <div>
-        <label>Repeat Password</label>
-        <input
-          type='password'
-          name='repeat_password'
-          onChange={updateRepeatPassword}
-          value={repeatPassword}
-          required={true}
-        ></input>
-      </div>
-      <button type='submit'>Sign Up</button>
-    </form>
+      <form className="SignupForm" onSubmit={onSignUp}>
+        <div className='SignupErrorContainer'>
+          {errors.map((error, ind) => (
+            <div className='SignupError' key={ind}>{error}</div>
+          ))}
+        </div>
+        <div className='SignupFieldContainer'>
+          <label className='SignupLabel'>Name</label>
+          <input
+            className='SignupInput'
+            type='text'
+            name='name'
+            onChange={updateName}
+            value={name}
+            required={true}
+          ></input>
+        </div>
+        <div className='SignupFieldContainer'>
+          <label className='SignupLabel'>Username</label>
+          <input
+            className='SignupInput'
+            type='text'
+            name='username'
+            placeholder='Username'
+            onChange={updateUsername}
+            value={username}
+            required={true}
+          ></input>
+        </div>
+        <div className='SignupFieldContainer'>
+          <label className='SignupLabel'>Email</label>
+          <input
+            className='SignupInput'
+            type='text'
+            name='email'
+            placeholder='Email'
+            onChange={updateEmail}
+            value={email}
+            required={true}
+          ></input>
+        </div>
+        <div className='SignupFieldContainer'>
+          <label className='SignupLabel'>Password</label>
+          <input
+            className='SignupInput'
+            type='password'
+            name='password'
+            placeholder='Password'
+            onChange={updatePassword}
+            value={password}
+            required={true}
+          ></input>
+        </div>
+        <div className='SignupFieldContainer'>
+          <label className='SignupLabel'>Repeat Password</label>
+          <input
+            className='SignupInput'
+            type='password'
+            name='repeat_password'
+            placeholder='Repeat Password'
+            onChange={updateRepeatPassword}
+            value={repeatPassword}
+            required={true}
+          ></input>
+        </div>
+      </form>
+      <button onClick={onSignUp} className='SignupSubmitButton' type='submit'>Sign up</button>
+    </div>
   );
 };
 

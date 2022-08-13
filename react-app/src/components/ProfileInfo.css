@@ -7,7 +7,6 @@
     object-fit: fill;
     width: 600px;
     height: 230px;
-    cursor: pointer;
 }
 
 .profile-prof-pic {
@@ -66,7 +65,7 @@
 }
 
 .profile-bio {
-    margin-left: 15px;
+    margin: 15px;
 }
 
 .profile-stats {
@@ -78,6 +77,8 @@
     align-items: center;
     color: gray;
     margin-left: 15px;
+    margin-top:10px;
+    margin-bottom: 10px;
     height: 20px;
     font-family: 'Lucida Sans Unicode';
     font-size: 15px;

@@ -9,7 +9,7 @@ def seed_users():
         bio='Just taking a sniff of this website...I like it!', 
         profile_img='https://pbs.twimg.com/profile_images/1552995729014247425/TaJbIdmK_400x400.jpg', 
         header_img='https://www.allandetrobert.com/wp-content/uploads/2017/09/header-pet-food.jpg', 
-        email='demo@aa.io', 
+        email='demo@asa.io', 
         password='password', 
         birthday='1995-03-15', 
         joined='2019-03-17 12:12:22', 

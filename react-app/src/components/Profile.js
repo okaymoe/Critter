@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Extras from './Extras.js';
-import Feed from './Feed.js';
 import ProfileInfo from './ProfileInfo.js';
-import Sidebar from './Sidebar.js'
+import Sidebar from './Sidebar/Sidebar.js'
 import './Profile.css'
-import UsersCreets from './UsersCreets.js';
+import UsersCreets from './UsersCreets';
 
 function Profile() {
   const [user, setUser] = useState({});

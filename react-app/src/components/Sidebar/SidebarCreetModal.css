@@ -1,25 +1,25 @@
-.log_me_out {
-    background-color: rgb(255, 177, 177) !important;
+.sidebar-creet-modal-main-btn {
+    background-color: var(--app-color) !important;
     border: none !important;
-    color: rgb(255, 255, 255) !important;
+    color: white !important;
+    width: 100%;
     font-weight: 900 !important;
     text-transform: inherit !important;
     border-radius: 30px !important;
     height: 50px !important;
     margin-top: 20px !important;
-    width: 100%;
     cursor: pointer;
 }
 
-.log_me_out:hover {
-    background-color: rgb(255, 158, 158) !important;
+.sidebar-creet-modal-main-btn:hover {
+    background-color: rgb(43, 148, 233) !important;
     border: none !important;
     color: white !important;
+    width: 100%;
     font-weight: 900 !important;
     text-transform: inherit !important;
     border-radius: 30px !important;
     height: 50px !important;
     margin-top: 20px !important;
-    width: 100%;
     cursor: pointer;
 }

@@ -1,0 +1,203 @@
+.sidebar-add-creet-wrap {
+    display: flex;
+    width: 600px;
+    height: 250px;
+    color: white;
+    flex-direction: column;
+}
+
+.sidebar-add-creet-close-btn-and-title {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-add-creet-close-btn-container {
+    margin-left: 8px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    margin-left: 15px;
+}
+
+.sidebar-add-creet-close-btn-container:hover {
+    background-color: var(--app-background);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.sidebar-add-creet-close-btn {
+    height: 25px;
+    width: 25px;
+}
+
+.sidebar-add-creet-title {
+    font-family: 'Lucida Sans Unicode';
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: black;
+}
+
+.sidebar-add-creet-form {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    margin-top: 15px;
+}
+
+.sidebar-add-creet-profile-pic {
+    height: 44px;
+    width: 44px;
+    border-radius: 22px;
+    margin-left: 15px;
+}
+
+.sidebar-add-creet-first-half {
+    border-bottom: 1px solid gray;
+    width: 96%;
+}
+
+.sidebar-add-creet-input {
+    display: flex;
+    width: 95%;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    height: 115px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    resize: none;
+    margin-left: 15px;
+    font-family: 'Lucida Sans Unicode';
+}
+
+.sidebar-add-creet-input::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-add-creet-second-half {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar-add-creet-img-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.sidebar-add-creet-img-upload-container:hover {
+    background-color: var(--app-background);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.sidebar-add-creet-img-upload-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-add-creet-img-icon {
+    color: var(--app-color);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-add-creet-img-input {
+    display: none;
+}
+
+.sidebar-add-creet-img-standby {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-add-creet-img-delete-btn {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-right: 15px;
+}
+
+.sidebar-add-creet-img-delete-btn:hover {
+    color: rgb(219, 219, 219);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.sidebar-add-creet-img-name {
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans Unicode';
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.sidebar-add-creet-progress-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.sidebar-add-creet-progress {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-right: 15px;
+}
+
+.sidebar-add-creet-char-total {
+    font-family: 'Lucida Sans Unicode';
+    color: rgb(255, 0, 0);
+}
+
+.sidebar-add-creet-char-total-red {
+    font-family: 'Lucida Sans Unicode';
+    color: red;
+}
+
+.sidebar-add-creet-char-max {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Lucida Sans Unicode';
+    color: rgb(0, 0, 0);
+}
+
+.sidebar-add-creet-btn {
+    font-family: 'Lucida Sans Unicode';
+    background-color: var(--app-color);
+    border: none;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar-add-creet-btn:hover {
+    background-color: var(--app-color);
+}
+
+.sidebar-add-creet-btn:disabled {
+    opacity: 40%;
+    cursor: default;
+}

@@ -13,6 +13,7 @@ import ProfileEditModal from './ProfileEditModal';
 const ProfileInfo = ({ userId }) => {
 
     const sessionUser = useSelector(state => state.session.user);
+    console.log(sessionUser)
     const users = useSelector(state => state.user);
     const userInfo = users[userId]
     const [showProfileModal, setShowProfileModal] = useState(false);

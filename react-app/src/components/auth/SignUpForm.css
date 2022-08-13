@@ -1,0 +1,137 @@
+.SignupWrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 600px;
+    height: 600px;
+}
+
+.SignupErrorContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.SignupError {
+    color: var(--app-color);
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.SignupHeader {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.SignupTitle {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.SignupCloseButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.SignupCloseButtonContainer:hover {
+    background-color: #27323d;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.SignupCloseButton {
+    height: 20px;
+    width: 20px;
+}
+
+.SignUpTitleText {
+    font-size: 31px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.SignupForm {
+    color: rgb(0, 0, 0);
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.SignupForm::-webkit-scrollbar {
+    display: none;
+}
+
+.SignupInput {
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    border: none;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    width: 420px;
+    resize: none;
+    outline: none;
+}
+
+.SignupLabel {
+    margin: 8px;
+    margin-bottom: 0px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: gray;
+}
+
+.SignupFieldContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 15px;
+}
+
+.SignupFieldContainer:focus-within {
+    border: 2px var(--app-color) solid;
+}
+
+.SignupSubmitButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    height: 40px;
+    background-color: var(--app-background);
+    color: black;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 80px;
+    font-size: 18px;
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.SignupSubmitButton:hover {
+    background-color: var(--app-color);
+}

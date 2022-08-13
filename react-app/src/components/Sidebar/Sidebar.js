@@ -7,12 +7,13 @@ import { Button } from '@mui/material';
 import BugReportIcon from '@mui/icons-material/BugReport';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { getCreets } from '../store/creets';
-import { getComments } from '../store/comments';
-import { getUsers } from '../store/users';
-import { authenticate } from '../store/session';
+import { getCreets } from '../../store/creets';
+import { getComments } from '../../store/comments';
+import { getUsers } from '../../store/users';
+import { authenticate } from '../../store/session';
 import { useSelector } from 'react-redux';
-import LogoutButton from './auth/LogoutButton';
+import LogoutButton from '../auth/LogoutButton';
+import SidebarCreetModal from './SidebarCreetModal';
 
 
 const Sidebar = () => {
@@ -48,10 +49,8 @@ const Sidebar = () => {
             <NavLink style={{textDecoration: 'none'}} id="profilenav" to={`/users/${sessionUser.id}`}> 
                 <SidebarComponent text="Profile" Icon={<AccountCircleIcon/>}/>
             </NavLink>
+            <SidebarCreetModal/>
             <LogoutButton/>
-            <Button variant="outlined" className="sidebar-creet" fullWidth>
-                Creet
-            </Button>
         </div>
     );
 }

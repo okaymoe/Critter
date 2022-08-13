@@ -1,6 +1,6 @@
 import './ViewCreet.css';
 import React from 'react'
-import SideBar from './Sidebar';
+import SideBar from './Sidebar/Sidebar';
 import OneCreet from './Creets/OneCreet';
 import Extras from './Extras';
 
