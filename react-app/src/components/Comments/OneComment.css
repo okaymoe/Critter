@@ -1,6 +1,7 @@
 .single-comment-wrap {
     border-right: 1px solid var(--app-background);
-    width: 500px;
+    width: 550px;
+    border-left: 1px solid var(--app-background);
 }
 
 .single-comment-block {

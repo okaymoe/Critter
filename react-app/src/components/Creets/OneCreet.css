@@ -1,7 +1,8 @@
 .creet-comment-wrap {
     border-right: 1px solid var(--app-background);
-    width: 500px;
-
+    border-left: 1px solid var(--app-background);
+    width: 550px;
+    
 }
 
 .thread {

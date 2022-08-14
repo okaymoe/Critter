@@ -1,0 +1,25 @@
+.community-container {
+    margin-left: 25px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    width: 300px;
+    border-radius: 25px;
+}
+
+.community-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.community-title {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: 'Lucida Sans Unicode';
+}
