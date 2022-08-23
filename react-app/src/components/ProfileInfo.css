@@ -4,7 +4,7 @@
 }
 
 .profile-header {
-    object-fit: fill;
+    object-fit: cover;
     width: 600px;
     height: 230px;
 }
