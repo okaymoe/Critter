@@ -14,16 +14,6 @@ def seed_users():
         birthday='1995-03-15', 
         joined='2019-03-17 12:12:22', 
         location='Las Vegas, NV')
-    marnie = User(
-        username='marnie', 
-        name="Marnie the Hamster", 
-        bio='Where da nuts at', 
-        profile_img='https://media.istockphoto.com/photos/golden-hamster-in-front-of-white-background-picture-id1137633429?k=20&m=1137633429&s=612x612&w=0&h=eDd2QvHgIjUyvdnR_NYKj5UlMsKExNtTNxnOVFo7Vqo=',
-        email='marnie@aa.io', 
-        password='password', 
-        birthday='1993-08-01', 
-        joined='2011-11-06 12:12:22', 
-        location='Blifton, NJ')
     bobbie = User(
         username='bobbie', 
         name="bobbie boa", 

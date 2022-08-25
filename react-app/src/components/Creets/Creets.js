@@ -6,6 +6,7 @@ import AddCommentIcon from '@mui/icons-material/AddComment';
 import TimeAgo from 'react-timeago'
 import EditCreets from "./EditCreets";
 import EditCreetModal from "./EditCreetModal";
+// import LikeButton from '../Likes/Likes';
 
 
 const Creets = () => {
@@ -68,6 +69,7 @@ const Creets = () => {
                                     </div>
                                 </div>
                             </NavLink>
+                            {/* <LikeButton/> */}
                         </div>
                     </div>
                 )
