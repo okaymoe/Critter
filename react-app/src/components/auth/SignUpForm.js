@@ -6,13 +6,15 @@ import { signUp } from '../../store/session';
 import './SignUpForm.css';
 
 const SignUpForm = ({ setShowModal }) => {
+  const user = useSelector(state => state.session.user);
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
   const [name, setName] = useState('');
+  const [location, setLocation] = useState('');
+  // const [birthday, setBirthday] = useState(new Date(user.birthday) || new Date());
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
-  const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -28,6 +30,9 @@ const SignUpForm = ({ setShowModal }) => {
       email.length <= 40 &&
       email.length >= 9 &&
       email.match(emailRegex) &&
+      location.length >= 4 &&
+      location.length <= 25 &&
+      // birthday &&
       password.length <= 255 &&
       password.length >= 8 &&
       password === repeatPassword
@@ -52,6 +57,9 @@ const SignUpForm = ({ setShowModal }) => {
       if (email.length < 7 || email.length > 30) {
         validationErrors.push("Email must be between 7 and 30 characters");
       }
+      // if (location.length < 4 || location.length > 25) {
+      //   validationErrors.push("Location must be between 4 and 25 characters");
+      // }
       if (password.length < 7 || password.length > 30) {
         validationErrors.push("Password must be between 7 and 30 characters");
       }
@@ -73,6 +81,10 @@ const SignUpForm = ({ setShowModal }) => {
   const updateName = (e) => {
     setName(e.target.value);
   };
+
+  const updateLocation = (e) => {
+    setLocation(e.target.value);
+  }
 
   const updateEmail = (e) => {
     setEmail(e.target.value);
@@ -141,6 +153,18 @@ const SignUpForm = ({ setShowModal }) => {
             required={true}
           ></input>
         </div>
+        {/* <div className='SignupFieldContainer'>
+          <label className='SignupLabel'>Location</label>
+          <input
+            className='SignupInput'
+            type='text'
+            name='location'
+            placeholder='Location'
+            onChange={updateLocation}
+            value={location}
+            required={true}
+          ></input>
+        </div> */}
         <div className='SignupFieldContainer'>
           <label className='SignupLabel'>Password</label>
           <input

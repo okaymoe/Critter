@@ -49,7 +49,7 @@ const ProfileInfo = ({ userId }) => {
                     </p>
                     <div className='profile-stat-and-icon'>
                         <LocationOnIcon className='profile-icons' />
-                        <p className='profile-location'>{userInfo?.location}</p>
+                        <p className='profile-location'>{userInfo.location}</p>
                     </div>
                     <div className='profile-stat-and-icon'>
                         <CakeIcon className='profile-icons' />
