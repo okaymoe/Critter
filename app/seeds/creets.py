@@ -9,12 +9,12 @@ def seed_creets():
     )
     creet2 = Creet(
         user_id=2,
-        content="Just a new user here :)!",
+        content="I'm hungry, when owner feed me?????????",
         created_at="2022-08-01 11:11:12",
         updated_at="2022-08-01 11:11:12"
     )
     creet3 = Creet(
-        user_id=3,
+        user_id=2,
         content="Wow so cool! Reminds me of another website!",
         created_at="2022-08-01 11:11:12",
         updated_at="2022-08-01 11:11:12"
