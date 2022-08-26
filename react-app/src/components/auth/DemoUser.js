@@ -8,7 +8,7 @@ const DemoUser = () => {
 
     const loginDemo = (e) => {
         e.preventDefault();
-        const email = "demo@aa.io";
+        const email = "demo@user.io";
         const password = "password";
 
         return dispatch(sessionActions.login(email, password));
