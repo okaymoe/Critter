@@ -30,8 +30,8 @@ const SignUpForm = ({ setShowModal }) => {
       email.length <= 40 &&
       email.length >= 9 &&
       email.match(emailRegex) &&
-      location.length >= 4 &&
-      location.length <= 25 &&
+      // location.length >= 4 &&
+      // location.length <= 25 &&
       // birthday &&
       password.length <= 255 &&
       password.length >= 8 &&
