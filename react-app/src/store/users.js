@@ -77,6 +77,7 @@ export const editingUsers = (editUser) => async (dispatch) => {
         method: "PUT",
         body: formData
     });
+    console.log(response, "respoznzoze")
     if (response.ok) {
         const editedUser = await response.json();
         dispatch(createUser(editedUser));
