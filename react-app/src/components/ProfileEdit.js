@@ -96,7 +96,7 @@ const ProfileEdit = ({ setShowModal }) => {
             </div>
             <form className='edit-profile-form'>
                 <div>
-                    {errors?.map((error, ind) => (
+                    {errors.map((error, ind) => (
                         <div className='edit-profile-errors' key={ind}>{error}</div>
                     ))}
                 </div>
