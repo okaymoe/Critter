@@ -95,11 +95,11 @@ const ProfileEdit = ({ setShowModal }) => {
                 <button onClick={onSubmit} type='submit' className='edit-profile-sumbit-btn'>Save</button>
             </div>
             <form className='edit-profile-form'>
-                <div>
-                    {errors.map((error, ind) => (
+                {/* <div>
+                    {errors?.map((error, ind) => (
                         <div className='edit-profile-errors' key={ind}>{error}</div>
                     ))}
-                </div>
+                </div> */}
                 <div className='edit-profile-field-container'>
                     <label className='edit-label'>Name</label>
                     <input
